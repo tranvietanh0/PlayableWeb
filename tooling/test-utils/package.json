@@ -1,0 +1,14 @@
+{
+  "name": "@pwe/test-utils",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "vitest": "^1.6.0",
+    "happy-dom": "^14.0.0"
+  }
+}
