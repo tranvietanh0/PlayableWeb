@@ -55,6 +55,15 @@ export class ComponentStorage {
     return Array.from(map.keys());
   }
 
+  getAllComponents(entity: Entity): object[] {
+    const comps: object[] = [];
+    for (const map of this._storage.values()) {
+      const comp = map.get(entity);
+      if (comp) comps.push(comp);
+    }
+    return comps;
+  }
+
   getComponentMap<T extends object>(ctor: ComponentType<T>): ReadonlyMap<Entity, T> | undefined {
     const typeId = getComponentTypeId(ctor);
     const map = this._storage.get(typeId);

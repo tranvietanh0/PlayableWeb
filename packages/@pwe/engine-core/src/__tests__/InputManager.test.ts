@@ -85,7 +85,15 @@ describe('InputManager', () => {
       target: mockTarget,
       clientX: 50,
       clientY: 60,
-    } as Touch;
+      force: 1,
+      pageX: 50,
+      pageY: 60,
+      radiusX: 1,
+      radiusY: 1,
+      rotationAngle: 0,
+      screenX: 50,
+      screenY: 60,
+    } as unknown as Touch;
 
     mockTarget.dispatchEvent(new TouchEvent('touchstart', { touches: [touch], bubbles: true }));
     expect(input.state.touches.has(1)).toBe(true);

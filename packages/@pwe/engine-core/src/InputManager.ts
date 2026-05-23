@@ -52,19 +52,22 @@ export class InputManager {
     const touchStart = (e: TouchEvent) => {
       const list = e.touches.length > 0 ? e.touches : e.changedTouches;
       for (let i = 0; i < list.length; i++) {
-        const t = (list as unknown as Touch[])[i];
+        const t = list[i];
+        if (!t) continue;
         this._touches.set(t.identifier, { x: t.clientX, y: t.clientY });
       }
     };
     const touchMove = (e: TouchEvent) => {
       for (let i = 0; i < e.changedTouches.length; i++) {
-        const t = (e.changedTouches as unknown as Touch[])[i];
+        const t = e.changedTouches[i];
+        if (!t) continue;
         this._touches.set(t.identifier, { x: t.clientX, y: t.clientY });
       }
     };
     const touchEnd = (e: TouchEvent) => {
       for (let i = 0; i < e.changedTouches.length; i++) {
-        const t = (e.changedTouches as unknown as Touch[])[i];
+        const t = e.changedTouches[i];
+        if (!t) continue;
         this._touches.delete(t.identifier);
       }
     };

@@ -55,6 +55,10 @@ export class EntityManager {
     return this._generations[index] === generation;
   }
 
+  getAllEntities(): Entity[] {
+    return this.getAllAlive();
+  }
+
   getAllAlive(): Entity[] {
     const result: Entity[] = [];
     for (const index of this._alive) {
