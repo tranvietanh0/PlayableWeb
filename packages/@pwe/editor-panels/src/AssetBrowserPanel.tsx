@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useProjectStore } from '@pwe/editor-shell';
+import { TextInput, editorTheme, useProjectStore } from '@pwe/editor-shell';
 
 export interface AssetBrowserPanelProps {
   onDragAsset?: (assetId: string) => void;
@@ -28,24 +28,15 @@ export const AssetBrowserPanel: React.FC<AssetBrowserPanelProps> = ({
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <div
         style={{
-          padding: '6px 8px',
-          borderBottom: '1px solid #333',
+          padding: `${editorTheme.spacing.sm}px ${editorTheme.spacing.md}px`,
+          borderBottom: editorTheme.border.default,
         }}
       >
-        <input
-          type="text"
+        <TextInput
           placeholder="Filter assets..."
           value={filter}
           onChange={(e) => handleFilter(e.target.value)}
-          style={{
-            width: '100%',
-            background: '#2c2c2c',
-            color: '#e0e0e0',
-            border: '1px solid #444',
-            borderRadius: 4,
-            padding: '4px 8px',
-            fontSize: 12,
-          }}
+          style={{ width: '100%' }}
         />
       </div>
 
@@ -68,25 +59,25 @@ export const AssetBrowserPanel: React.FC<AssetBrowserPanelProps> = ({
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              gap: 4,
-              padding: 6,
-              background: '#252526',
-              borderRadius: 4,
+              gap: editorTheme.spacing.xs,
+              padding: editorTheme.spacing.sm,
+              background: editorTheme.color.surfaceRaised,
+              borderRadius: editorTheme.radius.md,
               cursor: 'grab',
-              border: '1px solid #333',
+              border: editorTheme.border.default,
             }}
           >
             <div
               style={{
                 width: 40,
                 height: 40,
-                background: '#333',
-                borderRadius: 4,
+                background: editorTheme.color.surfaceHover,
+                borderRadius: editorTheme.radius.md,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontSize: 10,
-                color: '#888',
+                color: editorTheme.color.textSubtle,
                 textTransform: 'uppercase',
               }}
             >
@@ -95,7 +86,7 @@ export const AssetBrowserPanel: React.FC<AssetBrowserPanelProps> = ({
             <span
               style={{
                 fontSize: 10,
-                color: '#ccc',
+                color: editorTheme.color.textMuted,
                 textAlign: 'center',
                 wordBreak: 'break-word',
                 width: '100%',

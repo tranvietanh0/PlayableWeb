@@ -1,5 +1,5 @@
 import React from 'react';
-import { useViewportStore } from '@pwe/editor-shell';
+import { NumberInput, editorTheme, useViewportStore } from '@pwe/editor-shell';
 
 export const CameraControls: React.FC = () => {
   const mode = useViewportStore((s) => s.mode);
@@ -19,22 +19,22 @@ export const CameraControls: React.FC = () => {
         display: 'flex',
         gap: 8,
         alignItems: 'center',
-        background: 'rgba(30,30,30,0.9)',
-        padding: '6px 10px',
-        borderRadius: 4,
-        border: '1px solid #444',
+        background: editorTheme.color.overlay,
+        padding: `${editorTheme.spacing.sm}px ${editorTheme.spacing.lg}px`,
+        borderRadius: editorTheme.radius.lg,
+        border: editorTheme.border.strong,
       }}
     >
       <select
         value={mode}
         onChange={(e) => setMode(e.target.value as '2d' | '3d' | 'mixed')}
         style={{
-          background: '#2c2c2c',
-          color: '#e0e0e0',
-          border: '1px solid #444',
-          borderRadius: 4,
+          background: editorTheme.color.surfaceRaised,
+          color: editorTheme.color.text,
+          border: editorTheme.border.default,
+          borderRadius: editorTheme.radius.md,
           padding: '4px 8px',
-          fontSize: 12,
+          fontSize: editorTheme.typography.controlSize,
         }}
       >
         <option value="3d">3D</option>
@@ -43,25 +43,22 @@ export const CameraControls: React.FC = () => {
       </select>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-        <label style={{ fontSize: 11, color: '#aaa' }}>Pos</label>
-        <input
-          type="number"
+        <label style={{ fontSize: 11, color: editorTheme.color.textMuted }}>Pos</label>
+        <NumberInput
           value={cameraPosition.x}
           onChange={(e) =>
             setCameraPosition({ ...cameraPosition, x: Number(e.target.value) })
           }
           style={inputStyle}
         />
-        <input
-          type="number"
+        <NumberInput
           value={cameraPosition.y}
           onChange={(e) =>
             setCameraPosition({ ...cameraPosition, y: Number(e.target.value) })
           }
           style={inputStyle}
         />
-        <input
-          type="number"
+        <NumberInput
           value={cameraPosition.z}
           onChange={(e) =>
             setCameraPosition({ ...cameraPosition, z: Number(e.target.value) })
@@ -71,9 +68,8 @@ export const CameraControls: React.FC = () => {
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-        <label style={{ fontSize: 11, color: '#aaa' }}>Zoom</label>
-        <input
-          type="number"
+        <label style={{ fontSize: 11, color: editorTheme.color.textMuted }}>Zoom</label>
+        <NumberInput
           step={0.1}
           value={cameraZoom}
           onChange={(e) => setCameraZoom(Number(e.target.value))}
@@ -86,10 +82,5 @@ export const CameraControls: React.FC = () => {
 
 const inputStyle: React.CSSProperties = {
   width: 48,
-  background: '#2c2c2c',
-  color: '#e0e0e0',
-  border: '1px solid #444',
-  borderRadius: 4,
   padding: '2px 4px',
-  fontSize: 12,
 };

@@ -4,6 +4,7 @@ import {
   PanelGroup,
   PanelResizeHandle,
 } from 'react-resizable-panels';
+import { editorTheme } from './ui/index.js';
 
 export interface PanelLayoutProps {
   toolbar: React.ReactNode;
@@ -27,8 +28,9 @@ export const PanelLayout: React.FC<PanelLayoutProps> = ({
         flexDirection: 'column',
         width: '100vw',
         height: '100vh',
-        background: '#121212',
-        color: '#e0e0e0',
+        background: editorTheme.color.appBackground,
+        color: editorTheme.color.text,
+        fontFamily: editorTheme.typography.fontFamily,
         overflow: 'hidden',
       }}
     >
@@ -52,7 +54,7 @@ export const PanelLayout: React.FC<PanelLayoutProps> = ({
           <PanelResizeHandle
             style={{
               width: 4,
-              background: '#333',
+              background: editorTheme.color.border,
               cursor: 'col-resize',
             }}
           />
@@ -68,7 +70,7 @@ export const PanelLayout: React.FC<PanelLayoutProps> = ({
                   <PanelResizeHandle
                     style={{
                       height: 4,
-                      background: '#333',
+                      background: editorTheme.color.border,
                       cursor: 'row-resize',
                     }}
                   />
@@ -92,7 +94,7 @@ export const PanelLayout: React.FC<PanelLayoutProps> = ({
           <PanelResizeHandle
             style={{
               width: 4,
-              background: '#333',
+              background: editorTheme.color.border,
               cursor: 'col-resize',
             }}
           />

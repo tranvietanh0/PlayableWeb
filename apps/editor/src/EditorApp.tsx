@@ -8,7 +8,7 @@ import {
   ScriptEditorPanel,
 } from '@pwe/editor-panels';
 import { EngineProvider, useEngine, PlayModeController } from '@pwe/editor-engine-bridge';
-import { useEditorStore } from '@pwe/editor-shell';
+import { editorTheme, useEditorStore } from '@pwe/editor-shell';
 import type { HierarchyNode } from '@pwe/editor-panels';
 
 export const EditorApp: React.FC = () => {
@@ -126,7 +126,7 @@ const EditorLayout: React.FC = () => {
               }}
             />
           </div>
-          <div style={{ flex: 1, borderLeft: '1px solid #333' }}>
+          <div style={{ flex: 1, borderLeft: editorTheme.border.default }}>
             <ScriptEditorPanel
               initialValue="// Write your game script here"
               onRun={() => {

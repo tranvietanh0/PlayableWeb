@@ -1,6 +1,7 @@
 import React from 'react';
 import { PanelLayout } from './PanelLayout.js';
 import { Toolbar } from './Toolbar.js';
+import { EmptyState, PanelChrome } from './ui/index.js';
 
 export interface AppProps {
   leftPanel?: React.ReactNode;
@@ -51,52 +52,8 @@ export const App: React.FC<AppProps> = ({
 const PanelContainer: React.FC<{ title: string; children: React.ReactNode }> = ({
   title,
   children,
-}) => {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        width: '100%',
-        height: '100%',
-        background: '#1e1e1e',
-        border: '1px solid #333',
-        overflow: 'hidden',
-      }}
-    >
-      <div
-        style={{
-          padding: '6px 10px',
-          fontSize: 12,
-          fontWeight: 600,
-          color: '#ccc',
-          background: '#252526',
-          borderBottom: '1px solid #333',
-          textTransform: 'uppercase',
-          letterSpacing: 0.5,
-        }}
-      >
-        {title}
-      </div>
-      <div style={{ flex: 1, overflow: 'auto' }}>{children}</div>
-    </div>
-  );
-};
+}) => <PanelChrome title={title}>{children}</PanelChrome>;
 
-const Placeholder: React.FC<{ text: string }> = ({ text }) => {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        height: '100%',
-        color: '#666',
-        fontSize: 14,
-      }}
-    >
-      {text}
-    </div>
-  );
-};
+const Placeholder: React.FC<{ text: string }> = ({ text }) => (
+  <EmptyState>{text}</EmptyState>
+);

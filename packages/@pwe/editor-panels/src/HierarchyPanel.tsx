@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEditorStore } from '@pwe/editor-shell';
+import { Button, editorTheme, useEditorStore } from '@pwe/editor-shell';
 
 export interface HierarchyNode {
   id: number;
@@ -29,22 +29,22 @@ export const HierarchyPanel: React.FC<HierarchyPanelProps> = ({
       <div
         style={{
           display: 'flex',
-          gap: 4,
-          padding: '6px 8px',
-          borderBottom: '1px solid #333',
+          gap: editorTheme.spacing.sm,
+          padding: `${editorTheme.spacing.sm}px ${editorTheme.spacing.md}px`,
+          borderBottom: editorTheme.border.default,
         }}
       >
-        <button style={btnStyle} onClick={onCreateEntity}>
+        <Button compact onClick={onCreateEntity}>
           + Entity
-        </button>
-        <button
-          style={btnStyle}
+        </Button>
+        <Button
+          compact
           onClick={() => {
             selectedIds.forEach((id) => onDeleteEntity?.(id));
           }}
         >
           Delete
-        </button>
+        </Button>
       </div>
 
       <div style={{ flex: 1, overflow: 'auto', padding: '4px 0' }}>
@@ -69,11 +69,11 @@ const HierarchyItem: React.FC<{
   return (
     <div
       style={{
-        padding: '4px 12px',
+        padding: `${editorTheme.spacing.xs}px ${editorTheme.spacing.lg}px`,
         cursor: 'pointer',
-        background: selected ? '#094771' : 'transparent',
-        color: '#e0e0e0',
-        fontSize: 13,
+        background: selected ? editorTheme.color.surfaceActive : 'transparent',
+        color: editorTheme.color.text,
+        fontSize: editorTheme.typography.bodySize,
         userSelect: 'none',
       }}
       onClick={(e) => onSelect(node.id, e.ctrlKey || e.metaKey)}
@@ -81,14 +81,4 @@ const HierarchyItem: React.FC<{
       {node.name}
     </div>
   );
-};
-
-const btnStyle: React.CSSProperties = {
-  padding: '2px 8px',
-  fontSize: 12,
-  background: '#2c2c2c',
-  color: '#e0e0e0',
-  border: '1px solid #444',
-  borderRadius: 4,
-  cursor: 'pointer',
 };

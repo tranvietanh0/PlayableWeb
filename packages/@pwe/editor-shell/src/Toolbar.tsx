@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEditorStore } from './stores/editorStore.js';
+import { Button, ToolbarGroup, editorTheme } from './ui/index.js';
 
 export interface ToolbarProps {
   onUndo?: (() => void) | undefined;
@@ -18,72 +19,43 @@ export const Toolbar: React.FC<ToolbarProps> = ({ onUndo, onRedo, onSave }) => {
       style={{
         display: 'flex',
         alignItems: 'center',
-        gap: 8,
-        padding: '8px 12px',
-        background: '#1e1e1e',
-        borderBottom: '1px solid #333',
-        color: '#e0e0e0',
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 14,
+        gap: editorTheme.spacing.md,
+        padding: `${editorTheme.spacing.md}px ${editorTheme.spacing.lg}px`,
+        background: editorTheme.color.surface,
+        borderBottom: editorTheme.border.default,
+        color: editorTheme.color.text,
+        fontFamily: editorTheme.typography.fontFamily,
+        fontSize: editorTheme.typography.bodySize,
         userSelect: 'none',
       }}
     >
-      <span style={{ fontWeight: 600, marginRight: 12 }}>PlayableWeb Editor</span>
+      <span style={{ fontWeight: 700, marginRight: editorTheme.spacing.md }}>
+        PlayableWeb Editor
+      </span>
 
-      <ToolbarButton
-        label={isPlaying ? 'Stop' : 'Play'}
-        active={isPlaying}
+      <Button
+        compact
+        variant={isPlaying ? 'primary' : 'default'}
         onClick={() => {
           if (isPlaying) stop();
           else play();
         }}
-      />
+      >
+        {isPlaying ? 'Stop' : 'Play'}
+      </Button>
 
-      <ToolbarDivider />
+      <ToolbarGroup>
+        <Button compact onClick={onUndo}>Undo</Button>
+        <Button compact onClick={onRedo}>Redo</Button>
+      </ToolbarGroup>
 
-      <ToolbarButton label="Undo" onClick={onUndo} />
-      <ToolbarButton label="Redo" onClick={onRedo} />
+      <ToolbarGroup>
+        <Button compact onClick={onSave}>Save</Button>
+      </ToolbarGroup>
 
-      <ToolbarDivider />
-
-      <ToolbarButton label="Save" onClick={onSave} />
-
-      <div style={{ marginLeft: 'auto', fontSize: 12, color: '#888' }}>
-        Mode: <strong>{mode}</strong>
+      <div style={{ marginLeft: 'auto', fontSize: 12, color: editorTheme.color.textSubtle }}>
+        Mode: <strong style={{ color: editorTheme.color.textMuted }}>{mode}</strong>
       </div>
     </div>
   );
 };
-
-const ToolbarButton: React.FC<{
-  label: string;
-  active?: boolean;
-  onClick?: (() => void) | undefined;
-}> = ({ label, active, onClick }) => {
-  return (
-    <button
-      onClick={onClick ?? undefined}
-      style={{
-        padding: '4px 10px',
-        borderRadius: 4,
-        border: '1px solid #444',
-        background: active ? '#0e639c' : '#2c2c2c',
-        color: active ? '#fff' : '#e0e0e0',
-        cursor: 'pointer',
-        fontSize: 13,
-      }}
-      onMouseEnter={(e) => {
-        (e.currentTarget as HTMLButtonElement).style.background = active ? '#1177bb' : '#3c3c3c';
-      }}
-      onMouseLeave={(e) => {
-        (e.currentTarget as HTMLButtonElement).style.background = active ? '#0e639c' : '#2c2c2c';
-      }}
-    >
-      {label}
-    </button>
-  );
-};
-
-const ToolbarDivider: React.FC = () => (
-  <div style={{ width: 1, height: 20, background: '#444', margin: '0 4px' }} />
-);

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button, PanelHeader, editorTheme } from '@pwe/editor-shell';
 
 export interface ScriptEditorPanelProps {
   initialValue?: string;
@@ -20,34 +21,11 @@ export const ScriptEditorPanel: React.FC<ScriptEditorPanelProps> = ({
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: '6px 10px',
-          borderBottom: '1px solid #333',
-          background: '#252526',
-        }}
-      >
-        <span style={{ fontSize: 12, fontWeight: 600, color: '#ccc' }}>
-          Script Editor
-        </span>
-        <button
-          onClick={onRun}
-          style={{
-            padding: '2px 10px',
-            fontSize: 12,
-            background: '#0e639c',
-            color: '#fff',
-            border: 'none',
-            borderRadius: 4,
-            cursor: 'pointer',
-          }}
-        >
+      <PanelHeader title="Script Editor">
+        <Button compact variant="primary" onClick={onRun}>
           Run
-        </button>
-      </div>
+        </Button>
+      </PanelHeader>
 
       <textarea
         value={code}
@@ -57,14 +35,15 @@ export const ScriptEditorPanel: React.FC<ScriptEditorPanelProps> = ({
           flex: 1,
           width: '100%',
           resize: 'none',
-          background: '#1e1e1e',
-          color: '#d4d4d4',
+          background: editorTheme.color.codeBackground,
+          color: editorTheme.color.text,
           border: 'none',
           padding: 10,
-          fontFamily: 'monospace',
+          fontFamily: editorTheme.typography.monoFamily,
           fontSize: 13,
           lineHeight: 1.5,
           outline: 'none',
+          boxSizing: 'border-box',
         }}
       />
     </div>

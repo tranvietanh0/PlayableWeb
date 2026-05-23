@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEditorStore } from '@pwe/editor-shell';
+import { EmptyState, NumberInput, TextInput, editorTheme, useEditorStore } from '@pwe/editor-shell';
 
 export interface ComponentField {
   name: string;
@@ -24,16 +24,12 @@ export const InspectorPanel: React.FC<InspectorPanelProps> = ({
   const selectedIds = useEditorStore((s) => s.selectedEntityIds);
 
   if (selectedIds.length === 0) {
-    return (
-      <div style={placeholderStyle}>
-        Select an entity to inspect
-      </div>
-    );
+    return <EmptyState>Select an entity to inspect</EmptyState>;
   }
 
   return (
-    <div style={{ padding: '8px 10px', overflow: 'auto' }}>
-      <div style={{ fontSize: 11, color: '#888', marginBottom: 8 }}>
+    <div style={{ padding: `${editorTheme.spacing.md}px ${editorTheme.spacing.lg}px`, overflow: 'auto' }}>
+      <div style={{ fontSize: 11, color: editorTheme.color.textSubtle, marginBottom: editorTheme.spacing.md }}>
         Entity {selectedIds.join(', ')}
       </div>
 
@@ -56,23 +52,23 @@ const ComponentSection: React.FC<{
     <div
       style={{
         marginBottom: 12,
-        border: '1px solid #333',
-        borderRadius: 4,
+        border: editorTheme.border.default,
+        borderRadius: editorTheme.radius.md,
         overflow: 'hidden',
       }}
     >
       <div
         style={{
-          padding: '6px 10px',
-          background: '#252526',
-          fontSize: 12,
-          fontWeight: 600,
-          color: '#ccc',
+          padding: `${editorTheme.spacing.sm}px ${editorTheme.spacing.lg}px`,
+          background: editorTheme.color.surfaceRaised,
+          fontSize: editorTheme.typography.controlSize,
+          fontWeight: 700,
+          color: editorTheme.color.textMuted,
         }}
       >
         {schema.type}
       </div>
-      <div style={{ padding: '6px 10px' }}>
+      <div style={{ padding: `${editorTheme.spacing.sm}px ${editorTheme.spacing.lg}px` }}>
         {schema.fields.map((field) => (
           <FieldRow
             key={field.name}
@@ -101,8 +97,8 @@ const FieldRow: React.FC<{
       <label
         style={{
           width: 80,
-          fontSize: 12,
-          color: '#aaa',
+          fontSize: editorTheme.typography.controlSize,
+          color: editorTheme.color.textMuted,
           flexShrink: 0,
         }}
       >
@@ -120,21 +116,19 @@ const FieldInput: React.FC<{
   switch (field.type) {
     case 'number':
       return (
-        <input
-          type="number"
+        <NumberInput
           value={field.value as number}
           onChange={(e) => onChange(Number(e.target.value))}
-          style={inputStyle}
+          style={{ flex: 1 }}
         />
       );
     case 'string':
     case 'assetRef':
       return (
-        <input
-          type="text"
+        <TextInput
           value={field.value as string}
           onChange={(e) => onChange(e.target.value)}
-          style={inputStyle}
+          style={{ flex: 1 }}
         />
       );
     case 'boolean':
@@ -185,31 +179,10 @@ const VecInput: React.FC<{
   value: number;
   onChange: (value: number) => void;
 }> = ({ value, onChange }) => (
-  <input
-    type="number"
+  <NumberInput
     step={0.1}
     value={value}
     onChange={(e) => onChange(Number(e.target.value))}
-    style={{ ...inputStyle, width: 52 }}
+    style={{ width: 52 }}
   />
 );
-
-const inputStyle: React.CSSProperties = {
-  flex: 1,
-  background: '#2c2c2c',
-  color: '#e0e0e0',
-  border: '1px solid #444',
-  borderRadius: 4,
-  padding: '3px 6px',
-  fontSize: 12,
-};
-
-const placeholderStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '100%',
-  height: '100%',
-  color: '#666',
-  fontSize: 13,
-};
