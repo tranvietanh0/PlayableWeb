@@ -1,0 +1,86 @@
+{
+  "_generated": "2026-05-11T10:33:24.243Z",
+  "_kitName": "theonekit-web",
+  "_moduleCount": 10,
+  "keywords": {
+    "3d": [
+      "shader",
+      "threejs",
+      "web"
+    ],
+    "backend": [
+      "auth",
+      "backend",
+      "better",
+      "databases",
+      "web"
+    ],
+    "commerce": [
+      "commerce",
+      "integration",
+      "payment",
+      "shopify",
+      "web"
+    ],
+    "content": [
+      "content",
+      "copywriting",
+      "mintlify",
+      "web"
+    ],
+    "core": [
+      "backend",
+      "core",
+      "development",
+      "frameworks",
+      "web"
+    ],
+    "devops": [
+      "core",
+      "deploy",
+      "devops",
+      "web"
+    ],
+    "frontend": [
+      "best",
+      "design",
+      "development",
+      "frontend",
+      "graph",
+      "practices",
+      "react",
+      "script",
+      "tanstack",
+      "web"
+    ],
+    "media": [
+      "media",
+      "remotion",
+      "web"
+    ],
+    "testing": [
+      "agent",
+      "browser",
+      "chrome",
+      "core",
+      "devtools",
+      "testing",
+      "web"
+    ],
+    "ui": [
+      "design",
+      "guidelines",
+      "max",
+      "pro",
+      "stitch",
+      "styling",
+      "web"
+    ]
+  },
+  "_origin": {
+    "kit": "theonekit-web",
+    "repository": "The1Studio/theonekit-web",
+    "module": null,
+    "protected": false
+  }
+}

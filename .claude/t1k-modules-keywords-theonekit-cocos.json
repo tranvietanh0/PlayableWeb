@@ -1,0 +1,57 @@
+{
+  "_generated": "2026-05-21T10:16:18.223Z",
+  "_kitName": "theonekit-cocos",
+  "_moduleCount": 2,
+  "keywords": {
+    "base": [
+      "base",
+      "cocos",
+      "graph",
+      "script"
+    ],
+    "playable": [
+      "animation",
+      "asset",
+      "async",
+      "build",
+      "cocos",
+      "composite",
+      "core",
+      "editor",
+      "extract",
+      "font",
+      "fsm",
+      "gameflow",
+      "implement",
+      "input",
+      "juice",
+      "layout",
+      "lifecycle",
+      "management",
+      "mcp",
+      "object",
+      "parameter",
+      "playable",
+      "pool",
+      "presets",
+      "progression",
+      "scan",
+      "score",
+      "sdk",
+      "service",
+      "signalbus",
+      "size",
+      "toast",
+      "tools",
+      "transitions",
+      "tutorials",
+      "utilities"
+    ]
+  },
+  "_origin": {
+    "kit": "theonekit-cocos",
+    "repository": "The1Studio/theonekit-cocos",
+    "module": null,
+    "protected": false
+  }
+}

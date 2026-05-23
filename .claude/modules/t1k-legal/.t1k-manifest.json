@@ -1,0 +1,30 @@
+{
+  "module": "t1k-legal",
+  "version": "0.3.2",
+  "kit": "theonekit-core",
+  "generatedBy": "release-action",
+  "generatedAt": "2026-05-23T07:41:18.376Z",
+  "files": {
+    "skills": [
+      "t1k-cap-table-admin/SKILL.md",
+      "t1k-cap-table-admin/references/cap-table-equity-admin.md",
+      "t1k-cap-table-admin/references/citations.md",
+      "t1k-delaware-incorporation/SKILL.md",
+      "t1k-delaware-incorporation/references/citations.md",
+      "t1k-delaware-incorporation/references/dgcl-essentials.md",
+      "t1k-foreign-owned-tax/SKILL.md",
+      "t1k-foreign-owned-tax/references/citations.md",
+      "t1k-foreign-owned-tax/references/foreign-owned-tax-obligations.md",
+      "t1k-hk-corp/SKILL.md",
+      "t1k-hk-corp/references/hk-corp-essentials.md",
+      "t1k-us-business-banking/SKILL.md",
+      "t1k-us-business-banking/references/banking-payment-infrastructure.md",
+      "t1k-us-business-banking/references/citations.md"
+    ],
+    "agents": [],
+    "hooks": [],
+    "fragments": [],
+    "other": []
+  },
+  "checksum": "sha256:a55a275028ab394841dcdce2ec4df6b59a48e08a972e4a34346e610a91492fd2"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@pwe/render-3d",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pwe/ecs-core": "workspace:*",
+    "@pwe/math": "workspace:*"
+  },
+  "peerDependencies": {
+    "three": "^0.164.0"
+  },
+  "devDependencies": {
+    "@pwe/ts-config": "workspace:*",
+    "@types/three": "^0.164.0",
+    "three": "^0.164.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

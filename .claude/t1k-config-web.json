@@ -1,0 +1,44 @@
+{
+  "registryVersion": 1,
+  "kitName": "theonekit-web",
+  "priority": 90,
+  "repos": {
+    "primary": "The1Studio/theonekit-web"
+  },
+  "description": "Webapp kit — web development context with package.json",
+  "context": {
+    "requiredPaths": [
+      "package.json"
+    ],
+    "requiredFeatures": [],
+    "description": "Requires Node.js project with package.json"
+  },
+  "features": {
+    "mcp": false,
+    "telemetry": true
+  },
+  "mcp": {
+    "required": [
+      {
+        "name": "playwright",
+        "purpose": "Browser automation for E2E testing and visual regression",
+        "installCmd": "claude mcp add playwright -s user -- npx @playwright/mcp@latest --headless",
+        "verifyTool": "mcp__playwright__"
+      }
+    ],
+    "recommended": [
+      {
+        "name": "t1k-web-testing-chrome-devtools",
+        "purpose": "Browser DevTools for console, network, and performance analysis",
+        "installCmd": "claude mcp add chrome-devtools -s user -- npx -y chrome-devtools-mcp@latest",
+        "verifyTool": "mcp__chrome-devtools__"
+      }
+    ]
+  },
+  "_origin": {
+    "kit": "theonekit-web",
+    "repository": "The1Studio/theonekit-web",
+    "module": null,
+    "protected": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "registryVersion": 1,
+  "priority": 90,
+  "roles": {
+    "implementer": "t1k-cocos-developer",
+    "tester": "t1k-cocos-tester",
+    "reviewer": "t1k-cocos-reviewer",
+    "debugger": "t1k-cocos-debugger",
+    "optimizer": "t1k-cocos-optimizer",
+    "validator": "t1k-cocos-validator"
+  },
+  "errorRecovery": {
+    "compilation": "implementer",
+    "test-failure": "tester",
+    "runtime": "debugger",
+    "performance": "optimizer",
+    "build-size": "optimizer"
+  },
+  "_origin": {
+    "kit": "theonekit-cocos",
+    "repository": "The1Studio/theonekit-cocos",
+    "module": null,
+    "protected": false
+  }
+}

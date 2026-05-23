@@ -1,0 +1,43 @@
+{
+  "module": "editor",
+  "version": "1.8.0",
+  "kit": "theonekit-unity",
+  "generatedBy": "release-action",
+  "generatedAt": "2026-05-20T02:47:52.786Z",
+  "files": {
+    "skills": [
+      "t1k-unity-editor-balance/SKILL.md",
+      "t1k-unity-editor-balance/references/balance-audit-checklist.md",
+      "t1k-unity-editor-dots-inventory-grid/SKILL.md",
+      "t1k-unity-editor-dots-inventory-grid/references/demo-shapes-guide.md",
+      "t1k-unity-editor-dots-inventory-grid/references/gotchas-ui-drag.md",
+      "t1k-unity-editor-dots-inventory-grid/references/gotchas.md",
+      "t1k-unity-editor-dots-inventory-grid/references/grid-placement-guide.md",
+      "t1k-unity-editor-dots-inventory-grid/references/passive-effects-guide.md",
+      "t1k-unity-editor-dots-inventory-grid/references/set-bonuses-guide.md",
+      "t1k-unity-editor-mcp-profile/SKILL.md",
+      "t1k-unity-editor-mcp-profile/references/optimization-targets.md",
+      "t1k-unity-editor-mcp-profile/references/profiling-workflow.md",
+      "t1k-unity-editor-milestone/SKILL.md",
+      "t1k-unity-editor-milestone/references/gate-checklists.md",
+      "t1k-unity-editor-playtest/SKILL.md",
+      "t1k-unity-editor-playtest/references/snapshot-comparison.md",
+      "t1k-unity-editor-playtest/references/validation-checks.md",
+      "t1k-unity-editor-profiling/SKILL.md",
+      "t1k-unity-editor-profiling/references/profiling-api.md",
+      "t1k-unity-editor-scene/SKILL.md",
+      "t1k-unity-editor-scene/references/demo-detection.md",
+      "t1k-unity-editor-scene/references/troubleshooting.md",
+      "t1k-unity-editor-sync/CK-BASELINE.md",
+      "t1k-unity-editor-sync/SKILL.md",
+      "t1k-unity-editor-sync/references/sync-checklist.md",
+      "t1k-unity-editor-wiki/SKILL.md",
+      "t1k-unity-editor-wiki/references/wiki-structure.md"
+    ],
+    "agents": [],
+    "hooks": [],
+    "fragments": [],
+    "other": []
+  },
+  "checksum": "sha256:911734c257a3334aa9d96e8596a053e863a0ab600cba5c6c48c39818fb91dfe8"
+}

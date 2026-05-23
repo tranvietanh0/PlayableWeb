@@ -1,0 +1,48 @@
+{
+  "registryVersion": 1,
+  "priority": 10,
+  "description": "Fallback routing — lowest priority. Engine-specific kits override via higher-priority fragments.",
+  "roles": {
+    "implementer": "t1k-fullstack-developer",
+    "tester": "t1k-tester",
+    "reviewer": "t1k-code-reviewer",
+    "debugger": "t1k-debugger",
+    "optimizer": "general-purpose",
+    "environment": "general-purpose",
+    "validator": "general-purpose",
+    "shader": "general-purpose",
+    "ui-developer": "general-purpose",
+    "game-developer": "general-purpose",
+    "kit-developer": "t1k-kit-developer",
+    "brainstormer": "t1k-brainstormer",
+    "planner": "t1k-planner",
+    "docs-manager": "t1k-docs-manager",
+    "git-manager": "t1k-git-manager",
+    "project-manager": "t1k-project-manager",
+    "skills-manager": "t1k-skills-manager",
+    "t1k-brainstormer": "t1k-brainstormer",
+    "t1k-debugger": "t1k-debugger",
+    "t1k-docs-manager": "t1k-docs-manager",
+    "t1k-git-manager": "t1k-git-manager",
+    "t1k-kit-developer": "t1k-kit-developer",
+    "t1k-planner": "t1k-planner",
+    "t1k-project-manager": "t1k-project-manager",
+    "t1k-skills-manager": "t1k-skills-manager",
+    "t1k-tester": "t1k-tester"
+  },
+  "errorRecovery": {
+    "compilation": "implementer",
+    "test-failure": "t1k-tester",
+    "runtime": "t1k-debugger",
+    "performance": "optimizer"
+  },
+  "_origin": {
+    "kit": "theonekit-core",
+    "repository": "The1Studio/theonekit-core",
+    "module": null,
+    "protected": true
+  },
+  "_generated": "2026-05-08T11:30:27.460Z",
+  "_generatedBy": "generate-routing-from-agents.cjs",
+  "_generatedFrom": "agent .md roles: frontmatter — edit agents/*.md instead of this file"
+}

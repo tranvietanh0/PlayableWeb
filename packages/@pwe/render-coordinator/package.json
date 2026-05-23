@@ -1,0 +1,28 @@
+{
+  "name": "@pwe/render-coordinator",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pwe/ecs-core": "workspace:*",
+    "@pwe/math": "workspace:*",
+    "@pwe/render-2d": "workspace:*",
+    "@pwe/render-3d": "workspace:*"
+  },
+  "devDependencies": {
+    "@pwe/ts-config": "workspace:*",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

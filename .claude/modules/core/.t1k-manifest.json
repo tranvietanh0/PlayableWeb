@@ -1,0 +1,51 @@
+{
+  "module": "core",
+  "version": "1.5.0",
+  "kit": "theonekit-web",
+  "generatedBy": "release-action",
+  "generatedAt": "2026-05-11T10:33:33.412Z",
+  "files": {
+    "skills": [
+      "t1k-web-core-backend-development/SKILL.md",
+      "t1k-web-core-backend-development/references/backend-api-design.md",
+      "t1k-web-core-backend-development/references/backend-architecture.md",
+      "t1k-web-core-backend-development/references/backend-authentication.md",
+      "t1k-web-core-backend-development/references/backend-code-quality.md",
+      "t1k-web-core-backend-development/references/backend-debugging.md",
+      "t1k-web-core-backend-development/references/backend-devops.md",
+      "t1k-web-core-backend-development/references/backend-mindset.md",
+      "t1k-web-core-backend-development/references/backend-performance.md",
+      "t1k-web-core-backend-development/references/backend-security.md",
+      "t1k-web-core-backend-development/references/backend-technologies.md",
+      "t1k-web-core-backend-development/references/backend-testing.md",
+      "t1k-web-core-frameworks/SKILL.md",
+      "t1k-web-core-frameworks/references/implementation-checklist.md",
+      "t1k-web-core-frameworks/references/nextjs-app-router.md",
+      "t1k-web-core-frameworks/references/nextjs-data-fetching.md",
+      "t1k-web-core-frameworks/references/nextjs-optimization.md",
+      "t1k-web-core-frameworks/references/nextjs-server-components.md",
+      "t1k-web-core-frameworks/references/patterns-and-workflows.md",
+      "t1k-web-core-frameworks/references/remix-icon-integration.md",
+      "t1k-web-core-frameworks/references/turborepo-caching.md",
+      "t1k-web-core-frameworks/references/turborepo-pipelines.md",
+      "t1k-web-core-frameworks/references/turborepo-setup.md",
+      "t1k-web-core-frameworks/scripts/__init__.py",
+      "t1k-web-core-frameworks/scripts/nextjs_init.py",
+      "t1k-web-core-frameworks/scripts/requirements.txt",
+      "t1k-web-core-frameworks/scripts/tests/coverage-web.json",
+      "t1k-web-core-frameworks/scripts/tests/requirements.txt",
+      "t1k-web-core-frameworks/scripts/tests/test_nextjs_init.py",
+      "t1k-web-core-frameworks/scripts/tests/test_turborepo_migrate.py",
+      "t1k-web-core-frameworks/scripts/turborepo_migrate.py"
+    ],
+    "agents": [
+      "t1k-web-core-developer.md"
+    ],
+    "hooks": [],
+    "fragments": [
+      "t1k-routing-core.json"
+    ],
+    "other": []
+  },
+  "checksum": "sha256:26855703f09619ffdddfc228bd02c0b2f396cf31fb2f3b270f434630c2735664"
+}

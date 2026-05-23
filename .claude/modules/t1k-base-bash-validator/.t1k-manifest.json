@@ -1,0 +1,18 @@
+{
+  "module": "t1k-base-bash-validator",
+  "version": "0.3.2",
+  "kit": "theonekit-core",
+  "generatedBy": "release-action",
+  "generatedAt": "2026-05-23T07:41:18.322Z",
+  "files": {
+    "skills": [],
+    "agents": [],
+    "hooks": [],
+    "fragments": [],
+    "other": [
+      "config/forbidden-patterns.json",
+      "scripts/validate-bash.cjs"
+    ]
+  },
+  "checksum": "sha256:fea67222c1367a440791509378b338d121f1f5f16f5fc1a5dfc5ca1326cf84bf"
+}

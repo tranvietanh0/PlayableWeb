@@ -1,0 +1,28 @@
+{
+  "name": "@pwe/physics-3d",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pwe/ecs-core": "workspace:*",
+    "@pwe/math": "workspace:*",
+    "@pwe/signalbus": "workspace:*",
+    "@dimforge/rapier3d": "^0.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

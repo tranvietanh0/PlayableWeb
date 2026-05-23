@@ -1,0 +1,31 @@
+{
+  "module": "base",
+  "version": "1.7.0",
+  "kit": "theonekit-cocos",
+  "generatedBy": "release-action",
+  "generatedAt": "2026-05-21T10:16:26.849Z",
+  "files": {
+    "skills": [
+      "t1k-cocos-base-script-graph/SKILL.md",
+      "t1k-cocos-base-script-graph/install.json",
+      "t1k-cocos-base-script-graph/references/dependency-cruiser-config.md",
+      "t1k-cocos-base-script-graph/references/scene-prefab-walker.md",
+      "t1k-cocos-base-script-graph/references/ts-morph-ccclass.md",
+      "t1k-cocos-base-script-graph/scripts/detect.cjs",
+      "t1k-cocos-base-script-graph/scripts/generate.cjs",
+      "t1k-cocos-base-script-graph/scripts/lib/scene-walker.cjs",
+      "t1k-cocos-base-script-graph/scripts/list-capabilities.cjs",
+      "t1k-cocos-base-script-graph/scripts/requirements.cjs",
+      "t1k-cocos-base-script-graph/tests/capabilities.test.cjs",
+      "t1k-cocos-base-script-graph/tests/detect.test.cjs",
+      "t1k-cocos-base-script-graph/tests/fixtures/sample.prefab.json",
+      "t1k-cocos-base-script-graph/tests/fixtures/sample.scene.json",
+      "t1k-cocos-base-script-graph/tests/scene-walker.test.cjs"
+    ],
+    "agents": [],
+    "hooks": [],
+    "fragments": [],
+    "other": []
+  },
+  "checksum": "sha256:b79c0de8d245d931d14ab9272fbe482a424d4d09e59ef2937bfa899d98ccc435"
+}

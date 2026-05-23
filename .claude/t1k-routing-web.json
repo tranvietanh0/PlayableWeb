@@ -1,0 +1,23 @@
+{
+  "registryVersion": 1,
+  "priority": 90,
+  "description": "Webapp routing — overrides core fallbacks for web development",
+  "roles": {
+    "implementer": "t1k-web-core-developer",
+    "tester": "t1k-web-testing-tester",
+    "ui-developer": "t1k-web-ui-developer",
+    "reviewer": "code-reviewer",
+    "debugger": "debugger"
+  },
+  "errorRecovery": {
+    "compilation": "implementer",
+    "test-failure": "tester",
+    "runtime": "debugger"
+  },
+  "_origin": {
+    "kit": "theonekit-web",
+    "repository": "The1Studio/theonekit-web",
+    "module": null,
+    "protected": false
+  }
+}

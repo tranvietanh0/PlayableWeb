@@ -1,0 +1,39 @@
+{
+  "registryVersion": 1,
+  "priority": 90,
+  "kit": "cocos",
+  "kitName": "theonekit-cocos",
+  "repos": {
+    "primary": "The1Studio/theonekit-cocos",
+    "mcp": "The1Studio/cocos-mcp-server"
+  },
+  "context": {
+    "requiredPaths": [
+      "assets",
+      "settings"
+    ],
+    "description": "Requires Cocos Creator project structure"
+  },
+  "features": {
+    "mcp": true,
+    "playMode": false,
+    "batchMode": false
+  },
+  "mcp": {
+    "required": [
+      {
+        "name": "cocos-creator",
+        "purpose": "Cocos Creator Editor bridge for AI-driven development",
+        "installCmd": "claude mcp add cocos-creator -s user --transport http -- http://127.0.0.1:3000/mcp",
+        "verifyTool": "mcp__cocos-creator__"
+      }
+    ]
+  },
+  "extraCommands": [],
+  "_origin": {
+    "kit": "theonekit-cocos",
+    "repository": "The1Studio/theonekit-cocos",
+    "module": null,
+    "protected": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "module": "animation",
+  "version": "1.8.0",
+  "kit": "theonekit-unity",
+  "generatedBy": "release-action",
+  "generatedAt": "2026-05-20T02:47:52.712Z",
+  "files": {
+    "skills": [
+      "t1k-unity-animation-core/SKILL.md",
+      "t1k-unity-animation-core/references/mecanim-guide.md",
+      "t1k-unity-animation-core/references/playable-timeline-guide.md",
+      "t1k-unity-animation-litmotion/SKILL.md",
+      "t1k-unity-animation-litmotion/references/advanced-guide.md",
+      "t1k-unity-animation-litmotion/references/configuration-guide.md",
+      "t1k-unity-animation-litmotion/references/core-api-guide.md",
+      "t1k-unity-animation-litmotion/references/dotween-migration-guide.md"
+    ],
+    "agents": [],
+    "hooks": [],
+    "fragments": [],
+    "other": []
+  },
+  "checksum": "sha256:db86849a663e9331400a22aa310808fb0276cf10923fd5ba8a22fbf79c63bc62"
+}

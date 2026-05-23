@@ -1,0 +1,33 @@
+{
+  "module": "t1k-finance",
+  "version": "0.21.2",
+  "kit": "theonekit-core",
+  "generatedBy": "release-action",
+  "generatedAt": "2026-05-23T07:41:18.368Z",
+  "files": {
+    "skills": [
+      "t1k-finance/SKILL.md",
+      "t1k-finance/charter.md",
+      "t1k-finance/examples/playable-labs-concentration.md",
+      "t1k-finance/references/audiences.md",
+      "t1k-finance/references/cash-runway.md",
+      "t1k-finance/references/client-concentration.md",
+      "t1k-finance/references/data-modeling.md",
+      "t1k-finance/references/first-principles.md",
+      "t1k-finance/references/glossary.md",
+      "t1k-finance/references/gotchas.md",
+      "t1k-finance/references/multi-currency-fx.md",
+      "t1k-finance/references/p-and-l.md",
+      "t1k-finance/references/unit-economics.md",
+      "t1k-finance/references/visualization.md",
+      "t1k-finance/templates/board-quarterly.md",
+      "t1k-finance/templates/investor-monthly.md",
+      "t1k-finance/templates/ops-monthly-variance.md"
+    ],
+    "agents": [],
+    "hooks": [],
+    "fragments": [],
+    "other": []
+  },
+  "checksum": "sha256:657d6591e5be921ac436015e72aa152627b26a630a68844aacfc15103fca2082"
+}

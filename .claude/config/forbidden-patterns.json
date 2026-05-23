@@ -1,0 +1,25 @@
+{
+  "forbidden": [
+    "node_modules/",
+    "dist/",
+    "build/",
+    "venv/",
+    "__pycache__/",
+    "\\.next/",
+    "target/",
+    "\\.pyc$",
+    "\\.git/",
+    "\\.terraform/",
+    "\\.serverless/",
+    "Library/",
+    "Temp/",
+    "Logs/"
+  ],
+  "allowed_overrides": [],
+  "_origin": {
+    "kit": "theonekit-core",
+    "repository": "The1Studio/theonekit-core",
+    "module": null,
+    "protected": true
+  }
+}
